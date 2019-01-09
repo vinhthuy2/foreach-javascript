@@ -48,7 +48,7 @@ arr.forEach(function (item, index) {
         arr.splice(index, 1);
     }
 });
-// arr is now something like: [5, 6, 8, 9]
+// arr is now something like: [5, 6, 8, 9] --> the following element was ignored because of index change
 
 
 // ALSO DON'T use the third argument to the iterator function thinking it's a clone:
@@ -58,7 +58,7 @@ arr.forEach(function (item, index, arr) {
         arr.splice(index, 1);
     }
 });
-// arr is now something like: [5, 6, 8, 9]
+// arr is now something like: [5, 6, 8, 9] --> the following element was ignored because of index change
 
 // DO use a reverse for-loop:
 var arr = [5, 6, 7, 8, 9];
